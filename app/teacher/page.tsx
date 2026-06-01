@@ -37,7 +37,7 @@ const backgroundTags = [
   "非物质文化遗产传承人",
   "高级按摩师",
   "心理咨询师",
-  "正一教道士"
+  "正一派道士"
 ];
 
 const philosophyPoints = [
@@ -120,7 +120,7 @@ export default function TeacherPage() {
               <Leaf aria-hidden="true" className="h-4 w-4 text-gold-500" />
               中式养生与家庭温养生活方式老师
             </div>
-            <h1 className="text-4xl font-semibold leading-tight text-herb-900 sm:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-semibold leading-snug text-herb-900 sm:text-4xl lg:text-5xl">
               刘凌云老师：三十余年传统养生传承，只为把“心安、家和、顺自然”带回现代家庭
             </h1>
             <p className="mt-6 text-lg leading-9 text-herb-700">
@@ -226,7 +226,7 @@ export default function TeacherPage() {
               align="left"
               eyebrow="传承背景"
               title="传统养生传承、非遗文化与身心调养经验"
-              description="刘凌云老师长期深耕中式养生领域，具备扁鹊玲相关传统养生传承背景，并拥有非物质文化遗产传承人身份，同时具备高级按摩师、心理咨询师等相关学习与实践经历，也拥有正一教道家修行背景。"
+              description="刘凌云老师长期深耕中式养生领域，具备扁鹊玲相关传统养生传承背景，并拥有非物质文化遗产传承人身份，同时具备高级按摩师、心理咨询师等相关学习与实践经历，也拥有正一派道家修行背景。"
             />
             <div className="space-y-5 rounded-lg border border-herb-200 bg-herb-50 p-6 text-base leading-8 text-herb-700">
               <p>
@@ -300,7 +300,7 @@ export default function TeacherPage() {
                 道家智慧与现代生活
               </h2>
               <p className="mt-5 text-base leading-8 text-herb-50">
-                作为正一教道士，刘凌云老师长期关注道家文化与身心修养。道家讲顺其自然，并不是消极躺平，而是提醒人不要过度用力，不要长期和自己的身体、情绪、家庭关系对抗。
+                作为正一派道士，刘凌云老师长期关注道家文化与身心修养。道家讲顺其自然，并不是消极躺平，而是提醒人不要过度用力，不要长期和自己的身体、情绪、家庭关系对抗。
               </p>
               <p className="mt-5 text-base leading-8 text-herb-50">
                 在现代生活里，很多人越想变好，反而越焦虑；越想养生，反而越紧张；越想为家人好，反而越容易控制家人。
