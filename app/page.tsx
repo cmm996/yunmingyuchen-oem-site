@@ -716,14 +716,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20" id="sample">
+      <section className="py-20" id="cooperation-support">
         <div className="section-shell">
           <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
             <SectionHeading
               align="left"
-              eyebrow="样品试单"
-              title="样品与试单支持"
-              description="先用样品和小批量方案验证渠道反馈，再决定包装、组合与下单节奏，更适合新品牌和新渠道起步。"
+              eyebrow="合作支持"
+              title="样品试单、渠道内容与合规边界一起规划"
+              description="先用样品和小批量方案验证渠道反馈，再决定包装、组合与下单节奏；后续可继续沟通渠道素材、合作流程和合规表达建议。"
             />
             <div className="grid gap-4 sm:grid-cols-2">
               {sampleSupportItems.map((item, index) => (
@@ -910,17 +910,14 @@ export default function Home() {
               <a className="focus-ring rounded-full hover:text-herb-900" href="#herbal-origin">
                 草本源头
               </a>
-              <a className="focus-ring rounded-full hover:text-herb-900" href="#products">
-                产品合作
+              <a className="focus-ring rounded-full hover:text-herb-900" href="#product-system">
+                产品体系
               </a>
-              <a className="focus-ring rounded-full hover:text-herb-900" href="#process">
-                合作流程
-              </a>
-              <a className="focus-ring rounded-full hover:text-herb-900" href="#support">
-                渠道支持
+              <a className="focus-ring rounded-full hover:text-herb-900" href="#cooperation-support">
+                合作支持
               </a>
               <a className="focus-ring rounded-full hover:text-herb-900" href="#contact">
-                联系我们
+                联系合作
               </a>
             </nav>
           </div>

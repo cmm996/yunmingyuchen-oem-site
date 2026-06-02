@@ -3,23 +3,17 @@ import { Leaf, Menu } from "lucide-react";
 
 const zhNavItems = [
   { label: "刘凌云老师", href: "/teacher" },
-  { label: "青城山纪实", href: "/#qingcheng-video" },
   { label: "草本源头", href: "/#herbal-origin" },
-  { label: "产品合作", href: "/#products" },
-  { label: "样品试单", href: "/#sample" },
-  { label: "渠道支持", href: "/#support" },
-  { label: "合规表达", href: "/#compliance" },
+  { label: "产品体系", href: "/#product-system" },
+  { label: "合作支持", href: "/#cooperation-support" },
   { label: "联系合作", href: "/#contact" }
 ];
 
 const enNavItems = [
   { label: "About Liu", href: "/teacher" },
-  { label: "Qingcheng Story", href: "/en#qingcheng-video" },
   { label: "Herbal Origin", href: "/en#herbal-origin" },
-  { label: "Products", href: "/en#products" },
-  { label: "Samples", href: "/en#sample" },
-  { label: "Support", href: "/en#support" },
-  { label: "Compliance", href: "/en#compliance" },
+  { label: "Product System", href: "/en#products" },
+  { label: "Cooperation Support", href: "/en#cooperation-support" },
   { label: "Contact", href: "/en#contact" }
 ];
 
@@ -35,7 +29,7 @@ export function SiteHeader({ language = "zh" }: SiteHeaderProps) {
       ? "Chinese wellness IP + Eastern herbal products"
       : "刘凌云中式养生 IP + 东方草本产品合作";
   const contactHref = language === "en" ? "/en#contact" : "/#contact";
-  const contactLabel = language === "en" ? "Contact" : "联系合作";
+  const contactLabel = language === "en" ? "Get Info Kit" : "获取资料包";
 
   return (
     <header className="sticky top-0 z-50 border-b border-herb-200/70 bg-herb-50/90 backdrop-blur-xl">
@@ -53,7 +47,7 @@ export function SiteHeader({ language = "zh" }: SiteHeaderProps) {
             </span>
           </span>
         </Link>
-        <nav className="hidden items-center gap-3 text-[13px] font-medium text-herb-700 lg:flex xl:gap-5 xl:text-sm">
+        <nav className="hidden items-center gap-5 text-sm font-medium text-herb-700 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}

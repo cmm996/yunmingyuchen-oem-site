@@ -416,14 +416,14 @@ export default function EnglishHomePage() {
         </div>
       </section>
 
-      <section className="bg-white py-20" id="sample">
+      <section className="bg-white py-20" id="cooperation-support">
         <div className="section-shell">
           <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
             <SectionHeading
               align="left"
-              eyebrow="Sample & Trial Order"
-              title="Start with samples, then move into private-label packaging"
-              description="For new channels and new brands, we recommend validating product direction, audience fit, packaging expectations, and content language before scaling."
+              eyebrow="Cooperation Support"
+              title="Samples, channel content, and compliant boundaries planned together"
+              description="For new channels and new brands, we recommend validating product direction, audience fit, packaging expectations, channel content, and compliant language before scaling."
             />
             <div className="grid gap-4 sm:grid-cols-2">
               {[
