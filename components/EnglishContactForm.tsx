@@ -17,7 +17,16 @@ const productOptions = [
   "Mugwort warming patch",
   "Mugwort foot soak pack",
   "Herbal eye patch / mask",
+  "Eastern herbal gift set / channel bundle",
   "Other"
+];
+
+const needOptions = [
+  "Get product information kit",
+  "Apply for sample trial",
+  "Ask about private label packaging",
+  "Learn about channel content support",
+  "Quick consultation first"
 ];
 
 export function EnglishContactForm() {
@@ -77,29 +86,20 @@ export function EnglishContactForm() {
         </label>
         <label className="block">
           <span className="text-sm font-medium text-herb-800">
-            Private label needed
+            Main request
           </span>
           <select className="focus-ring mt-2 w-full rounded-md border border-herb-200 bg-herb-50 px-4 py-3 text-herb-900">
-            <option>Yes</option>
-            <option>No</option>
-            <option>Not sure yet</option>
+            {needOptions.map((option) => (
+              <option key={option}>{option}</option>
+            ))}
           </select>
-        </label>
-        <label className="block md:col-span-2">
-          <span className="text-sm font-medium text-herb-800">
-            Expected order size
-          </span>
-          <input
-            className="focus-ring mt-2 w-full rounded-md border border-herb-200 bg-herb-50 px-4 py-3 text-herb-900"
-            placeholder="Samples first / small trial order / private-label set"
-          />
         </label>
         <label className="block md:col-span-2">
           <span className="text-sm font-medium text-herb-800">Notes</span>
           <textarea
-            rows={5}
+            rows={4}
             className="focus-ring mt-2 w-full resize-y rounded-md border border-herb-200 bg-herb-50 px-4 py-3 text-herb-900"
-            placeholder="Tell us about your market, channel, packaging needs, or sample request."
+            placeholder="Briefly tell us your market, channel, sample interest, or packaging needs."
           />
         </label>
       </div>
@@ -107,7 +107,7 @@ export function EnglishContactForm() {
         type="submit"
         className="focus-ring mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-herb-800 px-6 text-sm font-semibold text-white transition hover:bg-herb-900 sm:w-auto"
       >
-        Request product kit / sample plan
+        Get info kit / consult cooperation
         <Send aria-hidden="true" className="h-4 w-4" />
       </button>
       {submitted ? (

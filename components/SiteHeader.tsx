@@ -4,7 +4,7 @@ import { Leaf, Menu } from "lucide-react";
 const zhNavItems = [
   { label: "刘凌云老师", href: "/teacher" },
   { label: "草本源头", href: "/#herbal-origin" },
-  { label: "产品体系", href: "/#product-system" },
+  { label: "产品体系", href: "/products" },
   { label: "合作支持", href: "/#cooperation-support" },
   { label: "联系合作", href: "/#contact" }
 ];
@@ -12,7 +12,7 @@ const zhNavItems = [
 const enNavItems = [
   { label: "About Liu", href: "/teacher" },
   { label: "Herbal Origin", href: "/en#herbal-origin" },
-  { label: "Product System", href: "/en#products" },
+  { label: "Product System", href: "/products" },
   { label: "Cooperation Support", href: "/en#cooperation-support" },
   { label: "Contact", href: "/en#contact" }
 ];

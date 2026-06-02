@@ -422,7 +422,7 @@ export default function TeacherPage() {
             <ActionButton href="/#contact" variant="primary" icon={HandHeart}>
               咨询产品合作
             </ActionButton>
-            <ActionButton href="/#products" variant="secondary" icon={Leaf}>
+            <ActionButton href="/products" variant="secondary" icon={Leaf}>
               查看东方草本产品合作
             </ActionButton>
           </div>

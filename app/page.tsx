@@ -272,6 +272,11 @@ const herbalOriginHighlights = [
 
 const herbalOriginImages = [
   {
+    src: "/images/herbal-origin/qichun-qiai-industry-park.webp",
+    alt: "湖北蕲春国家级蕲艾产业示范园与蕲艾文化展示",
+    title: "蕲春艾都"
+  },
+  {
     src: "/images/herbal-origin/mugwort-harvest.webp",
     alt: "艾草田间人工收割场景",
     title: "艾草收割"
@@ -492,7 +497,7 @@ export default function Home() {
 
       <section className="bg-herb-50 py-20" id="herbal-origin">
         <div className="section-shell">
-          <div className="grid gap-10 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] xl:items-center">
+          <div className="space-y-10">
             <div className="min-w-0">
               <SectionHeading
                 align="left"
@@ -524,7 +529,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative min-w-0">
+            <div className="relative mx-auto min-w-0 max-w-5xl">
               <div className="absolute -left-5 top-8 h-28 w-28 rounded-full border border-gold-300/60" />
               <div className="absolute -right-6 bottom-12 h-36 w-36 rounded-full border border-herb-300/60" />
               <div className="relative overflow-hidden rounded-lg border border-herb-200 bg-white p-4 shadow-soft">
@@ -540,12 +545,12 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-4 overflow-hidden rounded-md border border-herb-100 bg-herb-50">
-                  <div className="relative aspect-[16/9]">
+                  <div className="relative aspect-[4/3] sm:aspect-[16/11]">
                     <Image
                       src={herbalOriginImages[0].src}
                       alt={herbalOriginImages[0].alt}
                       fill
-                      className="object-cover"
+                      className="object-contain p-2"
                       sizes="(min-width: 1280px) 46vw, 100vw"
                     />
                   </div>
@@ -698,32 +703,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-20" id="resource-protection">
-        <div className="section-shell">
-          <div className="grid gap-8 rounded-lg border border-herb-200 bg-herb-50 p-6 shadow-sm lg:grid-cols-[0.75fr_1.25fr] lg:p-8">
-            <div>
-              <p className="mb-3 text-sm font-semibold text-gold-500">
-                合作保护
-              </p>
-              <h2 className="text-3xl font-semibold leading-tight text-herb-900">
-                保护合作资源，不公开底牌
-              </h2>
-            </div>
-            <p className="text-base leading-8 text-herb-700">
-              为保护合作客户与供应链资源，官网不公开具体工厂名称、供应商信息、真实底价、批文编号和内部合作细节。相关资料将在确认合作意向后分阶段沟通。
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className="py-20" id="cooperation-support">
         <div className="section-shell">
           <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
             <SectionHeading
               align="left"
               eyebrow="合作支持"
-              title="样品试单、渠道内容与合规边界一起规划"
-              description="先用样品和小批量方案验证渠道反馈，再决定包装、组合与下单节奏；后续可继续沟通渠道素材、合作流程和合规表达建议。"
+              title="样品试单、渠道资料、合规边界与交付流程一起规划"
+              description="围绕合作方最关心的资料获取、样品测试、小批量试单、包装方案、渠道素材与合规表达，提供更清晰的合作推进路径。"
             />
             <div className="grid gap-4 sm:grid-cols-2">
               {sampleSupportItems.map((item, index) => (
@@ -741,81 +728,93 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      <section className="py-20" id="process">
-        <div className="section-shell">
-          <SectionHeading
-            eyebrow="合作流程"
-            title="从拿样到生产，每一步清楚可控"
-            description="合作流程适合用于确认样品、包装方案、合同和定金节点，让双方预期更明确。"
-          />
-          <ProcessTimeline steps={processSteps} />
-          <div className="mt-8 rounded-lg border border-gold-300 bg-white px-6 py-5 text-center text-base leading-8 text-herb-800 shadow-sm">
-            常规订单在确认包装方案与定金后，约 21 天左右完成生产交付，具体周期以产品规格、订单数量和包装复杂度为准。
+          <div className="mt-12 rounded-lg border border-herb-200 bg-white p-6 shadow-soft lg:p-8">
+            <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="mb-2 text-sm font-semibold text-gold-500">合作流程</p>
+                <h3 className="text-2xl font-semibold text-herb-900">
+                  从拿样到生产，每一步清楚可控
+                </h3>
+              </div>
+              <p className="max-w-xl text-sm leading-7 text-herb-700">
+                流程适合用于确认样品、包装方案、合同和定金节点，让双方预期更明确。
+              </p>
+            </div>
+            <ProcessTimeline steps={processSteps} />
+            <div className="mt-8 rounded-lg border border-gold-300 bg-herb-50 px-6 py-5 text-center text-base leading-8 text-herb-800">
+              常规订单在确认包装方案与定金后，约 21 天左右完成生产交付，具体周期以产品规格、订单数量和包装复杂度为准。
+            </div>
           </div>
-        </div>
-      </section>
 
-      <section className="bg-white py-20" id="why">
-        <div className="section-shell">
-          <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
-            <SectionHeading
-              align="left"
-              eyebrow="差异化合作"
-              title="为什么我们不是普通贴牌工厂"
-              description="我们不只是提供产品，更提供 IP、内容与渠道表达。普通贴牌更多停留在产品和包装，我们希望把刘凌云老师的中式养生内容、东方草本产品和渠道表达一起打通，让合作更有信任基础。"
-            />
+          <div className="mt-12 grid gap-10 rounded-lg border border-herb-200 bg-white p-6 shadow-soft lg:grid-cols-[0.82fr_1.18fr] lg:items-start lg:p-8">
+            <div>
+              <p className="mb-3 text-sm font-semibold text-gold-500">
+                差异化合作
+              </p>
+              <h3 className="text-2xl font-semibold leading-tight text-herb-900">
+                为什么我们不是普通贴牌工厂
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-herb-700">
+                我们不只是提供产品，更提供 IP、内容与渠道表达。普通贴牌更多停留在产品和包装，我们希望把刘凌云老师的中式养生内容、东方草本产品和渠道表达一起打通，让合作更有信任基础。
+              </p>
+            </div>
             <div className="grid gap-5 sm:grid-cols-2">
               {reasons.map((reason) => (
                 <CapabilityCard key={reason.title} {...reason} />
               ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      <section className="py-20" id="support">
-        <div className="section-shell">
-          <SectionHeading
-            eyebrow="渠道支持"
-            title="给渠道的不只是货，还有可落地的内容资料"
-            description="围绕门店、社群、直播和海外华人市场，提供更容易讲清楚、用得上的基础素材。"
-          />
-          <SupportList items={supportItems} />
-        </div>
-      </section>
+          <div className="mt-12 rounded-lg border border-herb-200 bg-white p-6 shadow-soft lg:p-8">
+            <div className="mb-8">
+              <p className="mb-3 text-sm font-semibold text-gold-500">
+                渠道资料
+              </p>
+              <h3 className="text-2xl font-semibold leading-tight text-herb-900">
+                给渠道的不只是货，还有可落地的内容资料
+              </h3>
+              <p className="mt-4 max-w-3xl text-sm leading-7 text-herb-700">
+                围绕门店、社群、直播和海外华人市场，提供更容易讲清楚、用得上的基础素材。
+              </p>
+            </div>
+            <SupportList items={supportItems} />
+          </div>
 
-      <section className="bg-herb-900 py-20 text-white" id="compliance">
-        <div className="section-shell">
-          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-            <div>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            <div className="rounded-lg border border-herb-200 bg-white p-6 shadow-soft lg:p-8">
+              <p className="mb-3 text-sm font-semibold text-gold-500">
+                信息边界
+              </p>
+              <h3 className="text-2xl font-semibold leading-tight text-herb-900">
+                合作资源保护与信息边界
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-herb-700">
+                为保护合作客户与供应链资源，官网不公开具体工厂名称、供应商信息、真实底价、批文编号和内部合作细节。相关资料将在确认合作意向后，按照合作阶段分层沟通。
+              </p>
+            </div>
+            <div className="rounded-lg border border-herb-800 bg-herb-900 p-6 text-white shadow-soft lg:p-8">
               <p className="mb-3 text-sm font-semibold text-gold-300">
                 合规表达
               </p>
-              <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
+              <h3 className="text-2xl font-semibold leading-tight">
                 我们坚持合规、真实、长期的产品表达
-              </h2>
-            </div>
-            <div className="rounded-lg border border-white/15 bg-white/10 p-6 text-base leading-8 text-herb-50">
-              我们的产品定位为东方草本生活方式与日常温养护理产品，不替代专业判断或建议。我们会为合作渠道提供合规表达建议，避免医疗化、绝对化、恐吓式和夸大化宣传，帮助产品以“日常温养、居家护理、家庭关怀、东方草本生活方式”的方式被用户理解。
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-herb-50">
+                我们的产品定位为东方草本生活方式与日常温养护理产品，不替代专业判断或建议。我们会为合作渠道提供合规表达建议，避免医疗化、绝对化、恐吓式和夸大化宣传，帮助产品以“日常温养、居家护理、家庭关怀、东方草本生活方式”的方式被用户理解。
+              </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section className="bg-white py-20" id="kit">
-        <div className="section-shell">
-          <div className="grid gap-10 rounded-lg border border-herb-200 bg-herb-50 p-6 shadow-soft lg:grid-cols-[0.9fr_1.1fr] lg:p-8">
+          <div className="mt-12 grid gap-10 rounded-lg border border-herb-200 bg-white p-6 shadow-soft lg:grid-cols-[0.9fr_1.1fr] lg:p-8">
             <div>
               <p className="mb-3 text-sm font-semibold text-gold-500">
                 资料包转化
               </p>
-              <h2 className="text-3xl font-semibold leading-tight text-herb-900 sm:text-4xl">
+              <h3 className="text-2xl font-semibold leading-tight text-herb-900">
                 提交合作需求，获取东方草本产品合作资料包
-              </h2>
-              <p className="mt-4 text-base leading-8 text-herb-700">
+              </h3>
+              <p className="mt-4 text-sm leading-7 text-herb-700">
                 适合想先了解产品方向、样品方案、贴牌路径和渠道素材的合作方。我们会根据你的渠道类型与目标市场，沟通更适合的资料与样品组合。
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -910,7 +909,7 @@ export default function Home() {
               <a className="focus-ring rounded-full hover:text-herb-900" href="#herbal-origin">
                 草本源头
               </a>
-              <a className="focus-ring rounded-full hover:text-herb-900" href="#product-system">
+              <a className="focus-ring rounded-full hover:text-herb-900" href="/products">
                 产品体系
               </a>
               <a className="focus-ring rounded-full hover:text-herb-900" href="#cooperation-support">

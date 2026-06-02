@@ -72,6 +72,11 @@ const herbalOriginHighlights = [
 
 const herbalOriginImages = [
   {
+    src: "/images/herbal-origin/qichun-qiai-industry-park.webp",
+    alt: "Qichun Hubei national Qiai industry demonstration park and Qiai culture display",
+    title: "Qichun Qiai Park"
+  },
+  {
     src: "/images/herbal-origin/mugwort-harvest.webp",
     alt: "Mugwort field harvesting scene",
     title: "Mugwort Harvest"
@@ -288,7 +293,7 @@ export default function EnglishHomePage() {
 
       <section className="bg-herb-50 py-20" id="herbal-origin">
         <div className="section-shell">
-          <div className="grid gap-10 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] xl:items-center">
+          <div className="space-y-10">
             <div className="min-w-0">
               <SectionHeading
                 align="left"
@@ -322,7 +327,7 @@ export default function EnglishHomePage() {
               </div>
             </div>
 
-            <div className="relative min-w-0">
+            <div className="relative mx-auto min-w-0 max-w-5xl">
               <div className="absolute -left-5 top-8 h-28 w-28 rounded-full border border-gold-300/60" />
               <div className="absolute -right-6 bottom-12 h-36 w-36 rounded-full border border-herb-300/60" />
               <div className="relative overflow-hidden rounded-lg border border-herb-200 bg-white p-4 shadow-soft">
@@ -340,12 +345,12 @@ export default function EnglishHomePage() {
                   </p>
                 </div>
                 <div className="mt-4 overflow-hidden rounded-md border border-herb-100 bg-herb-50">
-                  <div className="relative aspect-[16/9]">
+                  <div className="relative aspect-[4/3] sm:aspect-[16/11]">
                     <Image
                       src={herbalOriginImages[0].src}
                       alt={herbalOriginImages[0].alt}
                       fill
-                      className="object-cover"
+                      className="object-contain p-2"
                       sizes="(min-width: 1280px) 46vw, 100vw"
                     />
                   </div>
