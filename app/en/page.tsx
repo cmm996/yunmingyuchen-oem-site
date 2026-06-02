@@ -7,9 +7,11 @@ import {
   FileText,
   HandHeart,
   HeartHandshake,
+  Landmark,
   Leaf,
   MessageCircle,
   PackageCheck,
+  ShieldCheck,
   Sprout,
   Users
 } from "lucide-react";
@@ -40,6 +42,33 @@ const qingchengVideo = {
   note:
     "This video is for Chinese wellness culture exchange and Eastern warming lifestyle communication only. It does not constitute medical advice or product efficacy proof."
 };
+
+const herbalOriginHighlights = [
+  {
+    icon: Sprout,
+    title: "Herbal Source",
+    description:
+      "We care about herbal origin, regional culture, and the way source value is explained to partners."
+  },
+  {
+    icon: Landmark,
+    title: "Qiai Culture",
+    description:
+      "Qichun, Hubei is widely known as China’s mugwort capital, with a deep cultural foundation around Qiai and traditional moxibustion craftsmanship."
+  },
+  {
+    icon: Leaf,
+    title: "Daily Care Scenarios",
+    description:
+      "Traditional herbal culture is translated into modern family, studio, and community lifestyle scenarios."
+  },
+  {
+    icon: ShieldCheck,
+    title: "Compliant Channel Language",
+    description:
+      "We help partners communicate cultural value clearly and gently, instead of reducing products to generic private-label goods."
+  }
+];
 
 const heroShowcaseItems = [
   {
@@ -214,6 +243,95 @@ export default function EnglishHomePage() {
         ctaLabel="Watch on YouTube"
       />
 
+      <section className="bg-herb-50 py-20" id="herbal-origin">
+        <div className="section-shell">
+          <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <div>
+              <SectionHeading
+                align="left"
+                eyebrow="Herbal Origin"
+                title="Qichun and Qiai: cultural roots behind Eastern herbal products"
+                description="Qichun, Hubei is widely known as China’s mugwort capital. Qiai culture and traditional moxibustion craftsmanship carry a deep cultural foundation. Yunming Yuchen values herbal origin, traditional culture, daily care scenarios, and the needs of modern families in its Eastern herbal warming product system."
+              />
+              <p className="max-w-3xl text-base leading-8 text-herb-700">
+                We hope partners can understand the cultural value behind Eastern
+                herbal products through clearer and compliant communication,
+                rather than seeing them as ordinary private-label goods.
+              </p>
+              <div className="mt-7 grid gap-4 sm:grid-cols-2">
+                {herbalOriginHighlights.map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-lg border border-herb-200 bg-white p-5 shadow-sm"
+                  >
+                    <item.icon
+                      aria-hidden="true"
+                      className="mb-4 h-6 w-6 text-herb-700"
+                    />
+                    <h3 className="text-base font-semibold text-herb-900">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-7 text-herb-700">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -left-5 top-8 h-28 w-28 rounded-full border border-gold-300/60" />
+              <div className="absolute -right-6 bottom-12 h-36 w-36 rounded-full border border-herb-300/60" />
+              <div className="relative overflow-hidden rounded-lg border border-herb-200 bg-white p-4 shadow-soft">
+                <div className="rounded-md bg-paper-grain p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-500">
+                    Qichun, Hubei
+                  </p>
+                  <h3 className="mt-3 text-2xl font-semibold leading-tight text-herb-900 sm:text-3xl">
+                    Eastern herbal culture with a traceable story
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-herb-700">
+                    From regional culture and herbal application to packaging
+                    language and modern family scenarios, the source story gives
+                    channels a clearer way to introduce the product system.
+                  </p>
+                </div>
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  <div className="overflow-hidden rounded-md border border-herb-100 bg-herb-50">
+                    <div className="relative aspect-[4/3]">
+                      <Image
+                        src="/images/showcase/moxibustion-sample-tray.jpg"
+                        alt="Qiai herbal application sample display"
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 1024px) 22vw, 50vw"
+                      />
+                    </div>
+                    <div className="px-4 py-3 text-sm font-semibold text-herb-800">
+                      Herbal Application Samples
+                    </div>
+                  </div>
+                  <div className="overflow-hidden rounded-md border border-herb-100 bg-herb-50">
+                    <div className="relative aspect-[4/3]">
+                      <Image
+                        src="/images/showcase/moxibustion-device.jpg"
+                        alt="Eastern warming product form display"
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 1024px) 22vw, 50vw"
+                      />
+                    </div>
+                    <div className="px-4 py-3 text-sm font-semibold text-herb-800">
+                      Warming Product Forms
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20" id="products">
         <div className="section-shell">
           <SectionHeading
@@ -298,7 +416,7 @@ export default function EnglishHomePage() {
         </div>
       </section>
 
-      <section className="bg-herb-900 py-20 text-white">
+      <section className="bg-herb-900 py-20 text-white" id="compliance">
         <div className="section-shell">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
             <div>

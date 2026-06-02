@@ -247,6 +247,29 @@ const qingchengVideo = {
     "本视频仅用于中式养生文化交流与东方温养理念展示，不构成医疗建议，也不作为任何产品功效证明。"
 };
 
+const herbalOriginHighlights = [
+  {
+    icon: Sprout,
+    title: "草本来源",
+    description: "关注草本来源、产区文化与原料呈现方式，让产品表达更有来处。"
+  },
+  {
+    icon: Landmark,
+    title: "蕲艾文化",
+    description: "蕲春素有“中国艾都”之称，蕲艾文化与传统艾灸技艺具有深厚文化基础。"
+  },
+  {
+    icon: Leaf,
+    title: "日常养护场景",
+    description: "把传统草本文化放回现代家庭、门店体验与社群分享的日常场景中。"
+  },
+  {
+    icon: ShieldCheck,
+    title: "合规渠道表达",
+    description: "用清晰、温和、长期的方式表达文化价值，避免把产品做成普通贴牌货。"
+  }
+];
+
 const heroShowcaseItems = [
   {
     src: "/images/showcase/moxibustion-gift-box.jpg",
@@ -423,6 +446,91 @@ export default function Home() {
         youtubeUrl={qingchengVideo.youtubeUrl}
         ctaLabel="在 YouTube 观看完整视频"
       />
+
+      <section className="bg-herb-50 py-20" id="herbal-origin">
+        <div className="section-shell">
+          <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+            <div>
+              <SectionHeading
+                align="left"
+                eyebrow="草本源头"
+                title="蕲春艾都：让东方草本产品有文化来处"
+                description="蕲春素有“中国艾都”之称，蕲艾文化与传统艾灸技艺具有深厚的文化基础。云明宇琛在东方草本温养产品体系中，重视草本来源、传统文化、日常养护场景与现代家庭需求的结合。"
+              />
+              <p className="max-w-3xl text-base leading-8 text-herb-700">
+                我们希望通过更清晰、更合规的方式，让合作伙伴理解东方草本产品背后的文化价值，而不是把产品简单做成普通贴牌货。
+              </p>
+              <div className="mt-7 grid gap-4 sm:grid-cols-2">
+                {herbalOriginHighlights.map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-lg border border-herb-200 bg-white p-5 shadow-sm"
+                  >
+                    <item.icon
+                      aria-hidden="true"
+                      className="mb-4 h-6 w-6 text-herb-700"
+                    />
+                    <h3 className="text-base font-semibold text-herb-900">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-7 text-herb-700">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -left-5 top-8 h-28 w-28 rounded-full border border-gold-300/60" />
+              <div className="absolute -right-6 bottom-12 h-36 w-36 rounded-full border border-herb-300/60" />
+              <div className="relative overflow-hidden rounded-lg border border-herb-200 bg-white p-4 shadow-soft">
+                <div className="rounded-md bg-paper-grain p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-500">
+                    Qichun, Hubei
+                  </p>
+                  <h3 className="mt-3 text-2xl font-semibold leading-tight text-herb-900 sm:text-3xl">
+                    湖北蕲春｜东方草本文化源头
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-herb-700">
+                    从产区文化、草本应用、包装表达，到现代家庭的日常温养场景，形成更适合渠道沟通的产品故事。
+                  </p>
+                </div>
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  <div className="overflow-hidden rounded-md border border-herb-100 bg-herb-50">
+                    <div className="relative aspect-[4/3]">
+                      <Image
+                        src="/images/showcase/moxibustion-sample-tray.jpg"
+                        alt="蕲艾草本应用样品展示"
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 1024px) 22vw, 50vw"
+                      />
+                    </div>
+                    <div className="px-4 py-3 text-sm font-semibold text-herb-800">
+                      草本应用样品
+                    </div>
+                  </div>
+                  <div className="overflow-hidden rounded-md border border-herb-100 bg-herb-50">
+                    <div className="relative aspect-[4/3]">
+                      <Image
+                        src="/images/showcase/moxibustion-device.jpg"
+                        alt="东方温养产品形态展示"
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 1024px) 22vw, 50vw"
+                      />
+                    </div>
+                    <div className="px-4 py-3 text-sm font-semibold text-herb-800">
+                      温养产品形态
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-20" id="audience">
         <div className="section-shell">
@@ -748,11 +856,14 @@ export default function Home() {
               </p>
             </div>
             <nav className="flex flex-wrap gap-4 text-sm font-medium text-herb-700">
-              <a className="focus-ring rounded-full hover:text-herb-900" href="#products">
-                产品合作
-              </a>
               <a className="focus-ring rounded-full hover:text-herb-900" href="#teacher">
                 刘凌云老师
+              </a>
+              <a className="focus-ring rounded-full hover:text-herb-900" href="#herbal-origin">
+                草本源头
+              </a>
+              <a className="focus-ring rounded-full hover:text-herb-900" href="#products">
+                产品合作
               </a>
               <a className="focus-ring rounded-full hover:text-herb-900" href="#process">
                 合作流程

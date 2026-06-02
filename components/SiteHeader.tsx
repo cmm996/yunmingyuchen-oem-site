@@ -3,9 +3,10 @@ import { Leaf, Menu } from "lucide-react";
 
 const zhNavItems = [
   { label: "刘凌云老师", href: "/teacher" },
+  { label: "青城山纪实", href: "/#qingcheng-video" },
+  { label: "草本源头", href: "/#herbal-origin" },
   { label: "产品合作", href: "/#products" },
   { label: "样品试单", href: "/#sample" },
-  { label: "青城山纪实", href: "/#qingcheng-video" },
   { label: "渠道支持", href: "/#support" },
   { label: "合规表达", href: "/#compliance" },
   { label: "联系合作", href: "/#contact" }
@@ -13,10 +14,12 @@ const zhNavItems = [
 
 const enNavItems = [
   { label: "About Liu", href: "/teacher" },
+  { label: "Qingcheng Story", href: "/en#qingcheng-video" },
+  { label: "Herbal Origin", href: "/en#herbal-origin" },
   { label: "Products", href: "/en#products" },
   { label: "Samples", href: "/en#sample" },
-  { label: "Qingcheng Story", href: "/en#qingcheng-video" },
   { label: "Support", href: "/en#support" },
+  { label: "Compliance", href: "/en#compliance" },
   { label: "Contact", href: "/en#contact" }
 ];
 
@@ -50,7 +53,7 @@ export function SiteHeader({ language = "zh" }: SiteHeaderProps) {
             </span>
           </span>
         </Link>
-        <nav className="hidden items-center gap-5 text-sm font-medium text-herb-700 md:flex">
+        <nav className="hidden items-center gap-3 text-[13px] font-medium text-herb-700 lg:flex xl:gap-5 xl:text-sm">
           {navItems.map((item) => (
             <Link
               key={item.href}
