@@ -70,6 +70,49 @@ const herbalOriginHighlights = [
   }
 ];
 
+const herbalOriginImages = [
+  {
+    src: "/images/herbal-origin/mugwort-harvest.webp",
+    alt: "Mugwort field harvesting scene",
+    title: "Mugwort Harvest"
+  },
+  {
+    src: "/images/herbal-origin/mugwort-drying-yard.webp",
+    alt: "Mugwort sun drying yard scene",
+    title: "Mugwort Drying"
+  },
+  {
+    src: "/images/herbal-origin/sun-dried-mugwort.webp",
+    alt: "Natural condition of mugwort after sun drying",
+    title: "After Sun-Drying"
+  },
+  {
+    src: "/images/herbal-origin/mugwort-velvet-processing-equipment.webp",
+    alt: "Mugwort velvet processing equipment display",
+    title: "Velvet Processing"
+  },
+  {
+    src: "/images/herbal-origin/lei-huo-jiu-filling.webp",
+    alt: "Lei Huo Jiu filling process display",
+    title: "Filling Process"
+  },
+  {
+    src: "/images/herbal-origin/short-moxa-sticks-custom.webp",
+    alt: "Short moxa sticks customization process display",
+    title: "Short Moxa Sticks"
+  },
+  {
+    src: "/images/herbal-origin/moxa-processing-packaging.webp",
+    alt: "Mugwort velvet processing and packaging display",
+    title: "Processing Flow"
+  },
+  {
+    src: "/images/herbal-origin/packing-shipping.webp",
+    alt: "Herbal product packing and shipping process display",
+    title: "Packing & Shipping"
+  }
+];
+
 const heroShowcaseItems = [
   {
     src: "/images/showcase/moxibustion-gift-box.jpg",
@@ -296,35 +339,40 @@ export default function EnglishHomePage() {
                     channels a clearer way to introduce the product system.
                   </p>
                 </div>
-                <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                  <div className="overflow-hidden rounded-md border border-herb-100 bg-herb-50">
-                    <div className="relative aspect-[4/3]">
-                      <Image
-                        src="/images/showcase/moxibustion-sample-tray.jpg"
-                        alt="Qiai herbal application sample display"
-                        fill
-                        className="object-cover"
-                        sizes="(min-width: 1024px) 22vw, 50vw"
-                      />
-                    </div>
-                    <div className="px-4 py-3 text-sm font-semibold text-herb-800">
-                      Herbal Application Samples
-                    </div>
+                <div className="mt-4 overflow-hidden rounded-md border border-herb-100 bg-herb-50">
+                  <div className="relative aspect-[16/9]">
+                    <Image
+                      src={herbalOriginImages[0].src}
+                      alt={herbalOriginImages[0].alt}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 46vw, 100vw"
+                    />
                   </div>
-                  <div className="overflow-hidden rounded-md border border-herb-100 bg-herb-50">
-                    <div className="relative aspect-[4/3]">
-                      <Image
-                        src="/images/showcase/moxibustion-device.jpg"
-                        alt="Eastern warming product form display"
-                        fill
-                        className="object-cover"
-                        sizes="(min-width: 1024px) 22vw, 50vw"
-                      />
-                    </div>
-                    <div className="px-4 py-3 text-sm font-semibold text-herb-800">
-                      Warming Product Forms
-                    </div>
+                  <div className="px-4 py-3 text-sm font-semibold text-herb-800">
+                    {herbalOriginImages[0].title}
                   </div>
+                </div>
+                <div className="mt-4 flex snap-x gap-3 overflow-x-auto pb-2">
+                  {herbalOriginImages.slice(1).map((item) => (
+                    <div
+                      key={item.src}
+                      className="w-44 shrink-0 snap-start overflow-hidden rounded-md border border-herb-100 bg-herb-50 sm:w-52"
+                    >
+                      <div className="relative aspect-[4/3]">
+                        <Image
+                          src={item.src}
+                          alt={item.alt}
+                          fill
+                          className="object-cover"
+                          sizes="208px"
+                        />
+                      </div>
+                      <div className="px-3 py-2 text-xs font-semibold text-herb-800">
+                        {item.title}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

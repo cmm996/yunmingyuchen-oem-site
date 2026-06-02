@@ -270,6 +270,49 @@ const herbalOriginHighlights = [
   }
 ];
 
+const herbalOriginImages = [
+  {
+    src: "/images/herbal-origin/mugwort-harvest.webp",
+    alt: "艾草田间人工收割场景",
+    title: "艾草收割"
+  },
+  {
+    src: "/images/herbal-origin/mugwort-drying-yard.webp",
+    alt: "艾草自然晾晒场景",
+    title: "艾草晾晒"
+  },
+  {
+    src: "/images/herbal-origin/sun-dried-mugwort.webp",
+    alt: "艾草自然晾晒后的真实状态",
+    title: "晾晒后状态"
+  },
+  {
+    src: "/images/herbal-origin/mugwort-velvet-processing-equipment.webp",
+    alt: "艾草制绒设备展示",
+    title: "艾草制绒"
+  },
+  {
+    src: "/images/herbal-origin/lei-huo-jiu-filling.webp",
+    alt: "雷火灸灌装流程展示",
+    title: "灌装流程"
+  },
+  {
+    src: "/images/herbal-origin/short-moxa-sticks-custom.webp",
+    alt: "短艾柱定制流程展示",
+    title: "短艾柱定制"
+  },
+  {
+    src: "/images/herbal-origin/moxa-processing-packaging.webp",
+    alt: "艾草制绒工艺流程展示",
+    title: "制绒工艺"
+  },
+  {
+    src: "/images/herbal-origin/packing-shipping.webp",
+    alt: "草本产品打包发货流程展示",
+    title: "打包发货"
+  }
+];
+
 const heroShowcaseItems = [
   {
     src: "/images/showcase/moxibustion-gift-box.jpg",
@@ -496,35 +539,40 @@ export default function Home() {
                     从产区文化、草本应用、包装表达，到现代家庭的日常温养场景，形成更适合渠道沟通的产品故事。
                   </p>
                 </div>
-                <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                  <div className="overflow-hidden rounded-md border border-herb-100 bg-herb-50">
-                    <div className="relative aspect-[4/3]">
-                      <Image
-                        src="/images/showcase/moxibustion-sample-tray.jpg"
-                        alt="蕲艾草本应用样品展示"
-                        fill
-                        className="object-cover"
-                        sizes="(min-width: 1024px) 22vw, 50vw"
-                      />
-                    </div>
-                    <div className="px-4 py-3 text-sm font-semibold text-herb-800">
-                      草本应用样品
-                    </div>
+                <div className="mt-4 overflow-hidden rounded-md border border-herb-100 bg-herb-50">
+                  <div className="relative aspect-[16/9]">
+                    <Image
+                      src={herbalOriginImages[0].src}
+                      alt={herbalOriginImages[0].alt}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 46vw, 100vw"
+                    />
                   </div>
-                  <div className="overflow-hidden rounded-md border border-herb-100 bg-herb-50">
-                    <div className="relative aspect-[4/3]">
-                      <Image
-                        src="/images/showcase/moxibustion-device.jpg"
-                        alt="东方温养产品形态展示"
-                        fill
-                        className="object-cover"
-                        sizes="(min-width: 1024px) 22vw, 50vw"
-                      />
-                    </div>
-                    <div className="px-4 py-3 text-sm font-semibold text-herb-800">
-                      温养产品形态
-                    </div>
+                  <div className="px-4 py-3 text-sm font-semibold text-herb-800">
+                    {herbalOriginImages[0].title}
                   </div>
+                </div>
+                <div className="mt-4 flex snap-x gap-3 overflow-x-auto pb-2">
+                  {herbalOriginImages.slice(1).map((item) => (
+                    <div
+                      key={item.src}
+                      className="w-44 shrink-0 snap-start overflow-hidden rounded-md border border-herb-100 bg-herb-50 sm:w-52"
+                    >
+                      <div className="relative aspect-[4/3]">
+                        <Image
+                          src={item.src}
+                          alt={item.alt}
+                          fill
+                          className="object-cover"
+                          sizes="208px"
+                        />
+                      </div>
+                      <div className="px-3 py-2 text-xs font-semibold text-herb-800">
+                        {item.title}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
