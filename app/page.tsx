@@ -492,8 +492,8 @@ export default function Home() {
 
       <section className="bg-herb-50 py-20" id="herbal-origin">
         <div className="section-shell">
-          <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-            <div>
+          <div className="grid gap-10 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] xl:items-center">
+            <div className="min-w-0">
               <SectionHeading
                 align="left"
                 eyebrow="草本源头"
@@ -524,7 +524,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative min-w-0">
               <div className="absolute -left-5 top-8 h-28 w-28 rounded-full border border-gold-300/60" />
               <div className="absolute -right-6 bottom-12 h-36 w-36 rounded-full border border-herb-300/60" />
               <div className="relative overflow-hidden rounded-lg border border-herb-200 bg-white p-4 shadow-soft">
@@ -546,7 +546,7 @@ export default function Home() {
                       alt={herbalOriginImages[0].alt}
                       fill
                       className="object-cover"
-                      sizes="(min-width: 1024px) 46vw, 100vw"
+                      sizes="(min-width: 1280px) 46vw, 100vw"
                     />
                   </div>
                   <div className="px-4 py-3 text-sm font-semibold text-herb-800">
