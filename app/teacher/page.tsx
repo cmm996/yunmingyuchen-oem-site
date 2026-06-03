@@ -18,6 +18,7 @@ import { ActionButton } from "@/components/ActionButton";
 import { CapabilityCard } from "@/components/CapabilityCard";
 import { QuoteCard } from "@/components/QuoteCard";
 import { SectionHeading } from "@/components/SectionHeading";
+import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
@@ -428,6 +429,7 @@ export default function TeacherPage() {
           </div>
         </div>
       </section>
+      <SiteFooter description="刘凌云中式养生与东方家庭温养生活方式" />
     </main>
   );
 }

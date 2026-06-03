@@ -21,14 +21,6 @@ const productOptions = [
   "Other"
 ];
 
-const needOptions = [
-  "Get product information kit",
-  "Apply for sample trial",
-  "Ask about private label packaging",
-  "Learn about channel content support",
-  "Quick consultation first"
-];
-
 export function EnglishContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
@@ -80,16 +72,6 @@ export function EnglishContactForm() {
           </span>
           <select className="focus-ring mt-2 w-full rounded-md border border-herb-200 bg-herb-50 px-4 py-3 text-herb-900">
             {productOptions.map((option) => (
-              <option key={option}>{option}</option>
-            ))}
-          </select>
-        </label>
-        <label className="block">
-          <span className="text-sm font-medium text-herb-800">
-            Main request
-          </span>
-          <select className="focus-ring mt-2 w-full rounded-md border border-herb-200 bg-herb-50 px-4 py-3 text-herb-900">
-            {needOptions.map((option) => (
               <option key={option}>{option}</option>
             ))}
           </select>

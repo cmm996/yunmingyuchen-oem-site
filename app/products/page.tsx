@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import {
   BadgeCheck,
   Boxes,
@@ -18,6 +17,7 @@ import { ActionButton } from "@/components/ActionButton";
 import { CapabilityCard } from "@/components/CapabilityCard";
 import { ProductCard } from "@/components/ProductCard";
 import { SectionHeading } from "@/components/SectionHeading";
+import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
@@ -330,30 +330,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <footer className="border-t border-herb-200 bg-white py-10">
-        <div className="section-shell flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-          <div>
-            <h2 className="text-xl font-semibold text-herb-900">云明宇琛</h2>
-            <p className="mt-2 text-sm text-herb-700">
-              东方草本温养产品体系与渠道合作支持
-            </p>
-            <p className="mt-4 max-w-2xl text-xs leading-6 text-herb-600">
-              本页面内容仅用于产品合作与日常养护场景介绍，不构成专业健康建议。
-            </p>
-          </div>
-          <nav className="flex flex-wrap gap-4 text-sm font-medium text-herb-700">
-            <Link className="focus-ring rounded-full hover:text-herb-900" href="/">
-              返回首页
-            </Link>
-            <Link className="focus-ring rounded-full hover:text-herb-900" href="/#cooperation-support">
-              合作支持
-            </Link>
-            <Link className="focus-ring rounded-full hover:text-herb-900" href="/#contact">
-              联系合作
-            </Link>
-          </nav>
-        </div>
-      </footer>
+      <SiteFooter description="东方草本温养产品体系与渠道合作支持" />
     </main>
   );
 }

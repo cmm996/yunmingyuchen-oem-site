@@ -21,14 +21,6 @@ const productOptions = [
   "其他"
 ];
 
-const needOptions = [
-  "获取产品资料包",
-  "申请样品试单",
-  "咨询贴牌包装",
-  "了解渠道素材支持",
-  "先简单沟通"
-];
-
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
@@ -50,13 +42,11 @@ export function ContactForm() {
           />
         </label>
         <label className="block">
-          <span className="text-sm font-medium text-herb-800">
-            微信 / WhatsApp / 手机
-          </span>
+          <span className="text-sm font-medium text-herb-800">联系方式</span>
           <input
             required
             className="focus-ring mt-2 w-full rounded-md border border-herb-200 bg-herb-50 px-4 py-3 text-herb-900"
-            placeholder="方便联系的账号"
+            placeholder="微信 / WhatsApp / 手机"
           />
         </label>
         <label className="block">
@@ -78,14 +68,6 @@ export function ContactForm() {
           <span className="text-sm font-medium text-herb-800">感兴趣产品</span>
           <select className="focus-ring mt-2 w-full rounded-md border border-herb-200 bg-herb-50 px-4 py-3 text-herb-900">
             {productOptions.map((option) => (
-              <option key={option}>{option}</option>
-            ))}
-          </select>
-        </label>
-        <label className="block">
-          <span className="text-sm font-medium text-herb-800">当前最想了解</span>
-          <select className="focus-ring mt-2 w-full rounded-md border border-herb-200 bg-herb-50 px-4 py-3 text-herb-900">
-            {needOptions.map((option) => (
               <option key={option}>{option}</option>
             ))}
           </select>
